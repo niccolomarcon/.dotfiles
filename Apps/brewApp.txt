@@ -1,0 +1,4 @@
+node
+git
+wget
+caskroom/cask/brew-cask

@@ -1,0 +1,15 @@
+atom
+google-chrome
+spotify
+brackets
+libreoffice
+github-desktop
+telegram
+flux
+alfred
+moom
+bartender
+transmission
+music-manager
+android-file-transfer
+google-drive
