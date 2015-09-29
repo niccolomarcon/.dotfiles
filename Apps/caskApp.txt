@@ -13,3 +13,8 @@ transmission
 music-manager
 android-file-transfer
 google-drive
+mamp
+java
+google-chrome-canary
+gimp
+unrarx

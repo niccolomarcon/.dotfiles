@@ -6,12 +6,22 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until the script has finished.
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+# Select the name for this pc
+echo -n "Enter the name for this pc: "
+read name
+scutil --set HostName $name
+
 # Get current dir (so run this script from anywhere)
 export DOTFILES_DIR
 DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+# Install Command Line Tools
+xcode-select --install
+
 # Brew setup.
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew tap caskroom/versions
+brew update
 
 ## Installing apps. ##
 # Getting the list of apps from the txts in Apps/.
@@ -25,6 +35,7 @@ brew install ${brewApp[@]}
 brew cask install ${caskApp[@]}
 npm install -g ${nodeApp[@]}
 
+brew cask alfred link
 brew cleanup
 
 ## Symlinking dotfiles. ##
