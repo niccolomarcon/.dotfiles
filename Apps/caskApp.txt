@@ -18,3 +18,5 @@ java
 google-chrome-canary
 gimp
 unrarx
+netbeans
+vlc
