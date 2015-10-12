@@ -4,3 +4,5 @@ grunt-cli
 gulp
 coffee-script
 polyserve
+phonegap
+generator-polymer
