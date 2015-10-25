@@ -21,3 +21,4 @@ unrarx
 netbeans
 vlc
 android-studio
+diffmerge
