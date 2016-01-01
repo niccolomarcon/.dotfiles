@@ -6,3 +6,5 @@ coffee-script
 polyserve
 phonegap
 generator-polymer
+mamp-cli
+bearme

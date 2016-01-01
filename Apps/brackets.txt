@@ -1,0 +1,9 @@
+DH3ALEJANDRO/custom-work-for-brackets
+ivogabe/Brackets-Icons
+chuyik/brackets-snippets
+globexdesigns/brackets-jscs
+gruehle/MarkdownPreview
+ahuth/brackets-paste-and-indent
+jbardnz/RightClickExtended
+mikaeljorhult/brackets-todo
+emmetio/brackets-emmet

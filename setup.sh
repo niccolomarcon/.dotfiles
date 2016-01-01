@@ -20,7 +20,6 @@ xcode-select --install
 
 # Brew setup.
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew tap caskroom/versions
 brew update
 
 ## Installing apps. ##
@@ -29,17 +28,37 @@ IFS=$'\n'
 brewApp=($(cat ./Apps/brewApp.txt))
 caskApp=($(cat ./Apps/caskApp.txt))
 nodeApp=($(cat ./Apps/nodeApp.txt))
+rubyApp=($(cat ./Apps/rubyApp.txt))
 
 # Installing the apps in the correct order
 brew install ${brewApp[@]}
 brew cask install ${caskApp[@]}
 npm install -g ${nodeApp[@]}
+gem install ${rubyApp[@]}
 
 brew cask alfred link
 brew cleanup
 
+# Installing atom packeges
+apm install --packages-file Apps/apm.txt
+
+# Installing brackets packeges
+extensions=($(cat ./Apps/brackets.txt))
+length=${#extensions[@]}
+for (( i=0; i<${length}; i++ ));
+do
+  IFS='/' read -a record <<< "${extensions[$i]}"
+  git clone https://github.com/${record[0]}/${record[1]}.git ~/Library/Application\ Support/Brackets/extensions/user/${record[1]}
+done
+
+# Removing Chromes's apps
+rm -rf ~/Applications/Chrome\ Canary\ Apps.localized
+rm -rf ~/Applications/Chrome\ Apps.localized/Default\ apdfllckaahabafndbhieahigkjlhalf.app/
+# TODO remove other chrome apps
+
 ## Symlinking dotfiles. ##
 # Getting source and destination for each dotfile in DF/.
+IFS=$'\n'
 sourceDotfile=($(cat ./DF/source.txt))
 destination=($(cat ./DF/destination.txt))
 
@@ -47,7 +66,7 @@ destination=($(cat ./DF/destination.txt))
 length=${#sourceDotfile[@]}
 for (( i=0; i<${length}; i++ ));
 do
-  ln -sv $DOTFILES_DIR/${sourceDotfile[$i]} ${destination[$i]}
+  ln -svfn $DOTFILES_DIR/${sourceDotfile[$i]} "`eval echo ${destination[$i]//>}`"
 done
 
 # Setting up OSX preferences.

@@ -15,10 +15,13 @@ android-file-transfer
 google-drive
 mamp
 java
-google-chrome-canary
 gimp
 unrarx
 netbeans
 vlc
 android-studio
-diffmerge
+mysqlworkbench
+cyberduck
+imageoptim
+parallels-desktop
+firefox

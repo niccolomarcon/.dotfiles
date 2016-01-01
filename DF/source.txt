@@ -1,5 +1,5 @@
 Console/.aliases
 Console/.bash_profile
 Console/.bash_prompt
-Console/.function
+Console/.functions
 Console/.inputrc
