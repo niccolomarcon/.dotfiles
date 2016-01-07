@@ -50,10 +50,18 @@ do
   IFS='/' read -a record <<< "${extensions[$i]}"
   git clone https://github.com/${record[0]}/${record[1]}.git ~/Library/Application\ Support/Brackets/extensions/user/${record[1]}
 done
+cd ~/Library/Application\ Support/Brackets/extensions/user/brackets-jscs/
+npm install
+cd $DOTFILES_DIR
 
 # Removing Chromes's apps
 rm -rf ~/Applications/Chrome\ Canary\ Apps.localized
 rm -rf ~/Applications/Chrome\ Apps.localized/Default\ apdfllckaahabafndbhieahigkjlhalf.app/
+rm -rf ~/Applications/Chrome\ Apps.localized/Default\ coobgpohoikkiipiblmjeljniedjpjpf.app/
+rm -rf ~/Applications/Chrome\ Apps.localized/Default\ fahmaaghhglfmonjliepjlchgpgfmobi.app/
+rm -rf ~/Applications/Chrome\ Apps.localized/Default\ pjkljhegncpnkpknbcohdijeoejaedia.app/
+rm -rf ~/Applications/Chrome\ Apps.localized/Icon^M
+rm -rf ~/Applications/Chrome\ Apps.localized/app_list.app/
 # TODO remove other chrome apps
 
 ## Symlinking dotfiles. ##

@@ -136,7 +136,7 @@ alias push="git push"
 alias pull="git pull"
 alias merge="git merge"
 alias newbranch="git checkout -b"
-alias switch="git checkout"
+alias switchto="git checkout"
 alias delete="git branch -d"
 
 # npm
@@ -151,3 +151,6 @@ alias npmrg="sudo npm uninstall -g"
 # brew cask
 alias cask="brew cask install"
 alias caskr="brew cask uninstall"
+
+alias a="atom ."
+alias b="brackets ."

@@ -8,3 +8,4 @@ phonegap
 generator-polymer
 mamp-cli
 bearme
+mean-cli
