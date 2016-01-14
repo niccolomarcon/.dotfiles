@@ -24,6 +24,14 @@ defaults write com.apple.dock persistent-apps -array
 # Empty Trash securely by default
 defaults write com.apple.finder EmptyTrashSecurely -bool true
 
+# Enable ssh for admin (doesn't work)
+# systemsetup -setremotelogin on
+# dseditgroup -o create -q com.apple.access_ssh
+# dseditgroup -o edit -a admin -t group com.apple.access_ssh
+
+# add a crontab to always had my ip address available
+crontab cron.txt
+
 # Use a modified version of the Solarized Dark theme by default in Terminal.app (Need to be checked)
 osascript <<EOD
 tell application "Terminal"

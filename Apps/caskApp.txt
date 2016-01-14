@@ -26,3 +26,4 @@ imageoptim
 parallels-desktop
 firefox
 gitter
+sonic-pi

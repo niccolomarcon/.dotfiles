@@ -9,3 +9,4 @@ generator-polymer
 mamp-cli
 bearme
 mean-cli
+generator-jquery-boilerplate

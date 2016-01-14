@@ -7,3 +7,4 @@ ahuth/brackets-paste-and-indent
 jbardnz/RightClickExtended
 mikaeljorhult/brackets-todo
 emmetio/brackets-emmet
+zaggino/brackets-git
