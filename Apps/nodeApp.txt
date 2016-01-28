@@ -4,9 +4,10 @@ grunt-cli
 gulp
 coffee-script
 polyserve
-phonegap
+cordova
 generator-polymer
 mamp-cli
 bearme
 mean-cli
 generator-jquery-boilerplate
+generator-chrome-extension

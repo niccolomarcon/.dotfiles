@@ -125,7 +125,7 @@ alias chrome="open -a google\ chrome"
 alias f='open -a Finder'
 
 # be nice
-alias please="sudo"
+alias plz="sudo"
 
 # GIT STUFF
 alias revert="git reset --hard"
