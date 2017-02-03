@@ -42,6 +42,10 @@ brew cleanup
 # Installing atom packeges
 apm install --packages-file Apps/apm.txt
 
+# Installing Anaconda
+wget http://repo.continuum.io/archive/Anaconda2-4.0.0-MacOSX-x86_64.sh
+bash Anaconda2-4.0.0-MacOSX-x86_64.sh
+
 # Installing brackets packeges
 extensions=($(cat ./Apps/brackets.txt))
 length=${#extensions[@]}
@@ -70,7 +74,7 @@ IFS=$'\n'
 sourceDotfile=($(cat ./DF/source.txt))
 destination=($(cat ./DF/destination.txt))
 
-# Putting the fils in the correct position.
+# Putting the files in the correct position.
 length=${#sourceDotfile[@]}
 for (( i=0; i<${length}; i++ ));
 do

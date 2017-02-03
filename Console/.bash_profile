@@ -7,3 +7,6 @@ export PATH="$HOME/bin:$PATH";
 for file in ~/.{bash_prompt,aliases,functions,inputrc}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
+
+# added by Anaconda2 4.0.0 installer
+export PATH="/Users/niccolomarcon/anaconda2/bin:$PATH"

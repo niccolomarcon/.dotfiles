@@ -11,3 +11,4 @@ bearme
 mean-cli
 generator-jquery-boilerplate
 generator-chrome-extension
+grunt-init

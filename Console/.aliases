@@ -11,6 +11,7 @@ alias doc="cd ~/Documents"
 alias dl="cd ~/Downloads"
 alias de="cd ~/Desktop"
 alias h="history"
+alias vlc="/opt/homebrew-cask/Caskroom/vlc/2.2.1/VLC.app/Contents/MacOS/VLC"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -138,11 +139,13 @@ alias merge="git merge"
 alias newbranch="git checkout -b"
 alias switchto="git checkout"
 alias delete="git branch -d"
+alias diff="git diff HEAD"
+alias log="git log --all --decorate --oneline --graph"
 
 # npm
 alias npmp="sudo npm publish"
 alias npma="sudo npm adduser"
-alias npmi="sudo npm install"
+alias npmi="npm install"
 alias npmg="sudo npm install -g"
 alias npmu="sudo npm update"
 alias npmr="sudo npm uninstall"
