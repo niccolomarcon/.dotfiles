@@ -3,3 +3,5 @@ Console/.bash_profile
 Console/.bash_prompt
 Console/.functions
 Console/.inputrc
+Console/brackets.json
+Console/config.cson

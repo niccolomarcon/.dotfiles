@@ -15,15 +15,8 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 export DOTFILES_DIR
 DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-## Symlinking dotfiles. ##
-# Getting source and destination for each dotfile in DF/.
-IFS=$'\n'
-sourceDotfile=($(cat ./DF/source.txt))
-destination=($(cat ./DF/destination.txt))
+caskApp=($(cat ./Apps/cask.txt))
 
-# Putting the files in the correct position.
-length=${#sourceDotfile[@]}
-for (( i=0; i<${length}; i++ ));
-do
-  ln -svfn $DOTFILES_DIR/${sourceDotfile[$i]} "`eval echo ${destination[$i]//>}`"
-done
+# Installing the apps in the correct order
+
+brew cask install ${caskApp[@]}

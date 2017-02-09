@@ -1,3 +1,7 @@
+defaults write com.apple.sound.beep.sound -string "/System/Library/Sounds/Funk.aiff"
+
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerTapGesture -int 0
+
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
 
@@ -8,7 +12,11 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 defaults write com.apple.dock mouse-over-hilite-stack -bool true
 
 # Set the icon size of Dock items to 45 pixels
-defaults write com.apple.dock tilesize -int 45
+defaults write com.apple.dock tilesize -int 51
+
+defaults write com.apple.dock largesize -int 86
+
+defaults write com.apple.dock magnification -bool true
 
 # Minimize windows into their application’s icon
 defaults write com.apple.dock minimize-to-application -bool true
@@ -23,6 +31,12 @@ defaults write com.apple.dock persistent-apps -array
 
 # Empty Trash securely by default
 defaults write com.apple.finder EmptyTrashSecurely -bool true
+
+defaults write com.apple.finder NewWindowTarget -string "PfHm"
+
+defaults write com.apple.finder NewWindowTargetPath -string "file://~"
+
+defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 # Enable ssh for admin (doesn't work)
 # systemsetup -setremotelogin on

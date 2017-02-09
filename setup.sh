@@ -25,26 +25,20 @@ brew update
 ## Installing apps. ##
 # Getting the list of apps from the txts in Apps/.
 IFS=$'\n'
-brewApp=($(cat ./Apps/brewApp.txt))
-caskApp=($(cat ./Apps/caskApp.txt))
-nodeApp=($(cat ./Apps/nodeApp.txt))
-rubyApp=($(cat ./Apps/rubyApp.txt))
+brewApp=($(cat ./Apps/brew.txt))
+caskApp=($(cat ./Apps/cask.txt))
+nodeApp=($(cat ./Apps/node.txt))
 
 # Installing the apps in the correct order
 brew install ${brewApp[@]}
 brew cask install ${caskApp[@]}
 npm install -g ${nodeApp[@]}
-gem install ${rubyApp[@]}
 
-brew cask alfred link
+# brew cask alfred link
 brew cleanup
 
 # Installing atom packeges
 apm install --packages-file Apps/apm.txt
-
-# Installing Anaconda
-wget http://repo.continuum.io/archive/Anaconda2-4.0.0-MacOSX-x86_64.sh
-bash Anaconda2-4.0.0-MacOSX-x86_64.sh
 
 # Installing brackets packeges
 extensions=($(cat ./Apps/brackets.txt))

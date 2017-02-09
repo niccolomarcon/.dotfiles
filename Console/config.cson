@@ -1,0 +1,25 @@
+"*":
+  autosave: {}
+  core:
+    disabledPackages: [
+      "atom-sonic"
+      "linter-jscs"
+    ]
+    telemetryConsent: "limited"
+  editor:
+    invisibles: {}
+    showInvisibles: true
+  "exception-reporting":
+    userId: "24e305ce-dcaa-4ea4-df2d-48f867f603c7"
+  "imdone-atom": {}
+  linter: {}
+  "linter-jscs":
+    preset: "google"
+  "merge-conflicts": {}
+  minimap:
+    absoluteMode: true
+    charHeight: 3
+    charWidth: 2
+  "seti-ui": {}
+  welcome:
+    showOnStartup: false

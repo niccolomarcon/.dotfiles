@@ -1,5 +1,0 @@
-node
-git
-wget
-mongodb
-jpegoptim
