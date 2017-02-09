@@ -10,6 +10,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 echo -n "Enter the name for this pc: "
 read name
 scutil --set HostName $name
+scutil --set LocalHostName $name
 
 # Get current dir (so run this script from anywhere)
 export DOTFILES_DIR

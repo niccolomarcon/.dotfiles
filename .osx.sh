@@ -38,6 +38,10 @@ defaults write com.apple.finder NewWindowTargetPath -string "file://~"
 
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
+defaults write com.apple.menuextra.battery ShowPercent -string "YES"
+
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+
 # Enable ssh for admin (doesn't work)
 # systemsetup -setremotelogin on
 # dseditgroup -o create -q com.apple.access_ssh
