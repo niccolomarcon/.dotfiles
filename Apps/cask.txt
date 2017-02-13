@@ -13,7 +13,7 @@ rodeo
 skype
 sonic-pi
 spotify
-izip
+rar
 vlc
 atom
 google-chrome
