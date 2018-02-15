@@ -157,3 +157,8 @@ alias caskr="brew cask uninstall"
 
 alias a="atom ."
 alias b="brackets ."
+
+# python
+alias python="~/anaconda3/bin/python3.6"
+alias pip="~/anaconda3/bin/pip"
+alias django-admin="~/anaconda3/bin/python3.6 ~/anaconda3/lib/python3.6/site-packages/django/bin/django-admin.py"

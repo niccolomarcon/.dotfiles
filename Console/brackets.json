@@ -236,31 +236,18 @@
             "trigger": "css",
             "description": "css link",
             "scope": "html",
-            "text": "<link rel=\"stylesheet\" href=\"${1:css/index.css}\">",
-            "mTime": 1486035696189
+            "text": "<!-- build:css ${1:css/index.css} -->\n<link rel=\"stylesheet\" href=\"${2:css/index.css}\">\n<!-- /build -->",
+            "mTime": 1487085993170
         },
         {
-            "trigger": "scriptsrc",
+            "trigger": "script",
             "description": "js script link",
             "scope": "html",
-            "text": "<script defer src=\"${1:js/index.js}\"></script>",
-            "mTime": 1486035688508
-        },
-        {
-            "text": "<link rel=\"import\" href=\"${1:bower_components/}\">",
-            "trigger": "import",
-            "scope": "html",
-            "mTime": 1445114709605
-        },
-        {
-            "trigger": "bimport",
-            "description": "import for bower components",
-            "scope": "html",
-            "text": "<link rel=\"import\" href=\"bower_components/${1}/${1}.html\">",
-            "mTime": 1445156042003
+            "text": "<!-- build:[src] ${1:js/index.min.js} -->\n<script defer src=\"${2:js/index.js}\"></script>\n<!-- /build -->",
+            "mTime": 1487085964332
         }
     ],
-    "livedev.multibrowser": true,
+    "livedev.multibrowser": false,
     "brackets-icons.iconset": "devicons",
     "mikaeljorhult.bracketsTodo.enabled": false,
     "mikaeljorhult.bracketsTodo.userSettings": {
@@ -296,13 +283,13 @@
     "custom.work.stepWheel": 40,
     "custom.work.workingFilesSidebar": false,
     "custom.work.hoverSidebar": true,
-    "custom.work.tooltip": true,
+    "custom.work.tooltip": false,
     "themes.theme": "light-theme",
     "themes.themeScrollbars": true,
     "custom.work.toggleToolbar": true,
     "custom.work.listView": true,
     "custom.work.scrollbar": false,
-    "brackets-git.gitPath": "/usr/local/bin/git",
+    "brackets-git.gitPath": "git",
     "brackets-git.stripWhitespaceFromCommits": true,
     "brackets-git.addEndlineToTheEndOfFile": true,
     "brackets-git.removeByteOrderMark": false,
@@ -330,9 +317,14 @@
     "brackets-git.gotoNextChangeShortcut": null,
     "brackets-git.refreshShortcut": null,
     "brackets-git.gitTimeout": 30,
-    "brackets-git.terminalCommand": "/Users/niccolomarcon/Library/Application Support/Brackets/extensions/user/brackets-git/shell/terminal.osa",
+    "brackets-git.terminalCommand": "/Users/niccolomarcon/Library/Application Support/Brackets/extensions/user/zaggino.brackets-git/shell/terminal.osa",
     "brackets-git.terminalCommandArgs": "$1",
     "brackets-git.debugMode": false,
     "custom.work.geticonprovider": false,
-    "custom.work.addiconprovider": false
+    "custom.work.addiconprovider": false,
+    "custom.work.useIconsOfCustomWork": false,
+    "custom.work.moveToolbarToSidebar": false,
+    "custom.work.grayScaleIcons": true,
+    "custom.work.toggle.sidebar": true,
+    "custom.work.scrollwheel": true
 }

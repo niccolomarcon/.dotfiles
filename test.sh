@@ -11,12 +11,28 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # dseditgroup -o create -q com.apple.access_ssh
 # dseditgroup -o edit -a admin -t group com.apple.access_ssh
 
-# Get current dir (so run this script from anywhere)
-export DOTFILES_DIR
-DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+apm install --packages-file Apps/apm.txt
 
-caskApp=($(cat ./Apps/cask.txt))
+# Installing brackets packeges
+extensions=($(cat ./Apps/brackets.txt))
+length=${#extensions[@]}
+for (( i=0; i<${length}; i++ ));
+do
+  IFS='/' read -a record <<< "${extensions[$i]}"
+  git clone https://github.com/${record[0]}/${record[1]}.git ~/Library/Application\ Support/Brackets/extensions/user/${record[1]}
+done
+cd ~/Library/Application\ Support/Brackets/extensions/user/brackets-jscs/
+npm install
+cd $DOTFILES_DIR
 
-# Installing the apps in the correct order
+IFS=$'\n'
+sourceDotfile=($(cat ./DF/source.txt))
+destination=($(cat ./DF/destination.txt))
 
-brew cask install ${caskApp[@]}
+# Putting the files in the correct position.
+length=${#sourceDotfile[@]}
+for (( i=0; i<${length}; i++ ));
+do
+  ln -svfn $DOTFILES_DIR/${sourceDotfile[$i]} "`eval echo ${destination[$i]//>}`"
+done
+
