@@ -4,17 +4,23 @@
     disabledPackages: [
       "atom-sonic"
       "linter-jscs"
+      "linter-jshint"
     ]
     telemetryConsent: "limited"
   editor:
+    fontSize: 23
     invisibles: {}
+    scrollPastEnd: true
     showInvisibles: true
   "exception-reporting":
     userId: "24e305ce-dcaa-4ea4-df2d-48f867f603c7"
+  fonts: {}
   "imdone-atom": {}
   linter: {}
   "linter-jscs":
     preset: "google"
+  "linter-ui-default": {}
+  "markdown-preview": {}
   "merge-conflicts": {}
   minimap:
     absoluteMode: true

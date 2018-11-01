@@ -11,6 +11,7 @@ alias doc="cd ~/Documents"
 alias dl="cd ~/Downloads"
 alias de="cd ~/Desktop"
 alias h="history"
+
 alias vlc="/opt/homebrew-cask/Caskroom/vlc/2.2.1/VLC.app/Contents/MacOS/VLC"
 
 # Detect which `ls` flavor is in use
@@ -152,13 +153,24 @@ alias npmr="sudo npm uninstall"
 alias npmrg="sudo npm uninstall -g"
 
 # brew cask
-alias cask="brew cask install"
-alias caskr="brew cask uninstall"
+alias brew="\brew install"
+alias brewr="\brew uninstall"
+alias brews="\brew search"
+alias cask="\brew cask install"
+alias caskr="\brew cask uninstall"
+alias casks="\brew cask search"
 
 alias a="atom ."
 alias b="brackets ."
 
 # python
-alias python="~/anaconda3/bin/python3.6"
-alias pip="~/anaconda3/bin/pip"
-alias django-admin="~/anaconda3/bin/python3.6 ~/anaconda3/lib/python3.6/site-packages/django/bin/django-admin.py"
+alias python="python3"
+alias pip="pip3"
+# alias django-admin="~/anaconda3/bin/python3.6 ~/anaconda3/lib/python3.6/site-packages/django/bin/django-admin.py"
+alias server="python3 -m http.server"
+# alias pycodestyle="python3 /usr/local/lib/python3.7/site-packages/pycodestyle.py"
+
+# tomcat
+alias tomcat="catalina"
+
+alias judge="g++ -std=c++11 -O2"

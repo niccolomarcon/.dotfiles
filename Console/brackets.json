@@ -6,7 +6,7 @@
     "spaceUnits": 2,
     "tabSize": 2,
     "closeBrackets": true,
-    "linting.collapsed": false,
+    "linting.collapsed": true,
     "linting.enabled": true,
     "linting.prefer": [
         "JSHint",
@@ -326,5 +326,7 @@
     "custom.work.moveToolbarToSidebar": false,
     "custom.work.grayScaleIcons": true,
     "custom.work.toggle.sidebar": true,
-    "custom.work.scrollwheel": true
+    "custom.work.scrollwheel": true,
+    "brackets-eslint.gutterMarks": true,
+    "brackets-eslint.useLocalESLint": false
 }

@@ -9,4 +9,5 @@ for file in ~/.{bash_prompt,aliases,functions,inputrc}; do
 done;
 
 # added by Anaconda2 4.0.0 installer
-export PATH="/Users/niccolomarcon/anaconda2/bin:$PATH"
+# export PATH="/Users/niccolomarcon/anaconda2/bin:$PATH"
+export PATH="/usr/local/opt/tomcat@8/bin:$PATH"
